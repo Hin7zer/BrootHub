@@ -3,7 +3,7 @@ name: Demo Page
 on:
   workflow_dispatch:
   push:
-    branches: [ "master", "cicd-integration" ]
+    branches: [ "master" ]
 
 permissions:
   contents: write
@@ -12,7 +12,7 @@ permissions:
 
 concurrency:
   group: "pages"
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   deploy:

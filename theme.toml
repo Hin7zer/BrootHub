@@ -44,7 +44,7 @@ features = [
   "Lightweight and fast",
   "Built from scratch"
 ]
-min_version = "0.153.0"
+min_version = "0.123.0"
 
 authors = [
   {name = 'Benjamin Hinz', homepage = 'https://github.com/Hin7zer'}
