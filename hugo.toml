@@ -1,5 +1,5 @@
 # Base configuration
-baseURL = "https://example.com"
+baseURL = "https://hin7zer.github.io/BrootHub/"
 languageCode = "en-us"
 title = "DEMO"
 theme = "BrootHub"
