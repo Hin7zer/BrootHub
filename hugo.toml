@@ -1,7 +1,7 @@
 # Base configuration
 baseURL = "https://localhost"
 relativeURLs = true
-canonifyURLs = false
+canonifyURLs = true
 languageCode = "en-us"
 title = "DEMO"
 theme = "BrootHub"
