@@ -6,7 +6,7 @@ title: "Datenschutz"
 > Dies ist **keine gewerbliche Website** und dient ausschließlich als **Demonstrations- und Beispielprojekt** für ein Hugo Theme.  
 > Es besteht **keine Impressumspflicht gemäß § 5 TMG**.  
 > Die darunter stehenden Angaben sind **vorgefertigte Templates**.  
-> Zur Kontaktaufnahme besuchen Sie bitte das [GitHub-Profil](https://github.com/DEIN_USERNAME). 
+> Zur Kontaktaufnahme besuchen Sie bitte das [GitHub-Profil](https://github.com/Hin7zer). 
 
 ℹ️ **🇺🇸 Notice (Demo Website)**
 

@@ -51,7 +51,7 @@ jobs:
       - name: Build example site
         run: |
           cd exampleSite
-          hugo --minify
+          hugo --minify --baseURL=https://hin7zer.github.io/BrootHub/
 
       - name: Setup Pages
         uses: actions/configure-pages@v4

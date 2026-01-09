@@ -4,40 +4,38 @@
 <!-- SEO -->
 {{ if site.Params.seo.enabled }}
 
-  <title>
-    {{ if .IsHome }}
-      {{ site.Title }}
-    {{ else }}
-      {{ .Title }} | {{ site.Title }}
-    {{ end }}
-  </title>
+<title>
+  {{ if .IsHome }}
+  {{ site.Title }}
+  {{ else }}
+  {{ .Title }} | {{ site.Title }}
+  {{ end }}
+</title>
 
-  <meta name="description"
-        content="{{ with .Params.description }}{{ . }}{{ else }}{{ site.Params.description }}{{ end }}">
+<meta name="description"
+  content="{{ with .Params.description }}{{ . }}{{ else }}{{ site.Params.description }}{{ end }}">
 
-  <link rel="canonical" href="{{ .Permalink }}">
+<link rel="canonical" href="{{ .Permalink }}">
 
 {{ else }}
 
-  <title>{{ site.Title }}</title>
+<title>{{ site.Title }}</title>
 
 {{ end }}
 
 <!-- OpenGraph -->
 {{ if site.Params.opengraph.enabled }}
 
-  <meta property="og:title"
-        content="{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }} | {{ site.Title }}{{ end }}">
+<meta property="og:title" content="{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }} | {{ site.Title }}{{ end }}">
 
-  <meta property="og:description"
-        content="{{ with .Params.description }}{{ . }}{{ else }}{{ site.Params.description }}{{ end }}">
+<meta property="og:description"
+  content="{{ with .Params.description }}{{ . }}{{ else }}{{ site.Params.description }}{{ end }}">
 
-  <meta property="og:url" content="{{ .Permalink }}">
-  <meta property="og:type"
-        content="{{ if .IsHome }}website{{ else }}article{{ end }}">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:type" content="{{ if .IsHome }}website{{ else }}article{{ end }}">
 
 {{ end }}
 
 {{ with site.Params.favicon }}
-  <link rel="icon" type="image/x-icon" href="{{ . }}">
+<link rel="icon" type="image/x-icon" href="{{ . | relURL }}">
 {{ end }}

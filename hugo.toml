@@ -1,5 +1,7 @@
 # Base configuration
-baseURL = "https://hin7zer.github.io/BrootHub/"
+baseURL = "https://localhost"
+relativeURLs = true
+canonifyURLs = false
 languageCode = "en-us"
 title = "DEMO"
 theme = "BrootHub"

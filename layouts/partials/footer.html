@@ -22,7 +22,7 @@
       <ul style="list-style: none; padding: 0; margin: 0;">
         {{ range .items }}
         <li style="margin-bottom: 6px;">
-          <a href="{{ .url }}" style="text-decoration: none; font-size: 0.9rem;" tabindex="0">{{ .name }}</a>
+          <a href="{{ .url | relURL }}" style="text-decoration: none; font-size: 0.9rem;" tabindex="0">{{ .name }}</a>
         </li>
         {{ end }}
       </ul>
@@ -40,7 +40,7 @@
 
   <div style="display: flex; justify-content: center; gap: 6px; flex-wrap: wrap; max-width: 500px; margin: 0 auto;">
     {{ range .Site.Params.Footer.SocialMedia }}
-    <a href="{{ .url }}" title="{{ .name }}" aria-label="Footer - SocialMedia - {{ .name }}" tabindex="0" style="
+    <a href="{{ .url | relURL }}" title="{{ .name }}" aria-label="Footer - SocialMedia - {{ .name }}" tabindex="0" style="
           padding: 3px 7px;
           background-color: transparent;
           color: inherit;
@@ -65,7 +65,7 @@
 
   <nav style="margin-bottom: 10px;" aria-label="Footer Navigation - Legal">
     {{ range .Site.Params.Footer.FooterLegalEntities }} |
-    <a href="{{ .url }}" style="margin: 0 8px; text-decoration: none; font-size: 0.8rem;" tabindex="0">{{ .name }}</a>
+    <a href="{{ .url | relURL }}" style="margin: 0 8px; text-decoration: none; font-size: 0.8rem;" tabindex="0">{{ .name }}</a>
     {{ end }} |
   </nav>
   {{ end }}
