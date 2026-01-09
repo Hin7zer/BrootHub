@@ -1,9 +1,9 @@
 # Base configuration
-baseURL = "https://localhost"
+baseURL = "https://localhost/testemich"
 relativeURLs = true
 canonifyURLs = true
 languageCode = "en-us"
-title = "DEMO"
+title = "BrootHub - Hugo theme Demo"
 theme = "BrootHub"
 themesDir = "../../"
 enableRobotsTXT = true
