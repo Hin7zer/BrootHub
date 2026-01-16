@@ -33,6 +33,12 @@ disableKinds = ["taxonomy", "term"]
   [params.seo]
     enabled = false # Very basic SEO functionality, can be enabled
 
+#  Example Parameter for security settings.
+#  [params.security]
+#    headers = [
+#      '<meta name="referrer" content="no-referrer">',
+#      '<meta http-equiv="X-XSS-Protection" content="0">'
+#    ]
 
   [params.Legal]
     # Main legal/club/association info

@@ -1,0 +1,78 @@
+<!-- ===== iframe Overlay Shortcode ===== -->
+<button class="iframe-full-overlay-btn" data-url="{{ .Get "url" }}">
+    {{ .Get "button_title" }}
+</button>
+
+
+<div class="iframe-full-overlay">
+    <div class="iframe-full-overlay-header">
+        <span>{{ .Get "overlay_title" }}</span>
+        <button class="iframe-full-overlay-close">✕</button>
+    </div>
+    <iframe class="iframe-full-overlay-frame"></iframe>
+</div>
+
+<style>
+    .iframe-full-overlay-btn {
+        padding: 10px 16px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    .iframe-full-overlay {
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, .75);
+        display: none;
+        flex-direction: column;
+        z-index: 9999;
+    }
+
+    .iframe-full-overlay-header {
+        height: 48px;
+        background: #111;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 14px;
+    }
+
+    .iframe-full-overlay-close {
+        background: none;
+        border: none;
+        color: white;
+        font-size: 22px;
+        cursor: pointer;
+    }
+
+    .iframe-full-overlay-frame {
+        flex: 1;
+        width: 100%;
+        border: none;
+    }
+</style>
+
+<script>
+    const btn = document.querySelector('.iframe-full-overlay-btn');
+    const overlay = document.querySelector('.iframe-full-overlay');
+    const frame = document.querySelector('.iframe-full-overlay-frame');
+    const closeBtn = document.querySelector('.iframe-full-overlay-close');
+
+    btn.addEventListener('click', () => {
+        frame.src = btn.dataset.url;
+        overlay.style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+    });
+
+    closeBtn.addEventListener('click', () => {
+        overlay.style.display = 'none';
+        frame.src = '';
+        document.body.style.overflow = '';
+    });
+
+    document.addEventListener('keydown', e => {
+        if (e.key === 'Escape') closeBtn.click();
+    });
+</script>
+<!-- ===== End ===== -->

@@ -1,3 +1,4 @@
 exampleSite/.hugo_build.lock
 exampleSite/public/
 exampleSite/content/test.md
+layouts/shortcodes/test.html
