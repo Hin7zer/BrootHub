@@ -16,7 +16,8 @@
         <div class="nav-menu">
             {{ range site.Params.MainMenu.items }}
             <div class="nav-item {{ if .submenu }} has-submenu{{ end }}">
-                <a href="{{ if not .submenu }}{{ .url | relURL }}{{ else }}#{{ end }}" tabindex="0">{{ .name }} {{ if .submenu }}▼{{ end }}</a>
+                <a href="{{ if not .submenu }}{{ .url | relURL }}{{ else }}#{{ end }}" tabindex="0">{{ .name }} {{ if
+                    .submenu }}▼{{ end }}</a>
                 {{ if .submenu }}
                 <div class="submenu">
                     {{ range .submenu }}
@@ -39,7 +40,7 @@
 <nav aria-label="Navigation Burger Menu">
     <div class="nav-menu-container" aria-hidden="true">
         <div class="nav-menu-header">
-            <a href="{{ " /" | relURL }}" class="nav-logo" tabindex="-1">
+            <a href="{{ site.BaseURL }}" class="nav-logo" tabindex="-1">
                 {{ if site.Params.LogoPicture }}
                 <img src="{{ site.Params.LogoPicture }}" alt="Logo" style="max-height: 50px;">
                 {{ else }}
