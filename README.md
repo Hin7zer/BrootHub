@@ -8,6 +8,9 @@ It is currently under development and subject to change.
 ⚠️ Please review the **[LICENSE](./LICENSE)** or **[LICENSE.md](./LICENSE.md)** file before using this theme.  
 Use is restricted to **private, non-commercial purposes** unless explicitly permitted by the copyright holder.
 
+Original Repository: https://github.com/Hin7zer/BrootHub
+Owner: https://github.com/Hin7zer/BrootHub 
+
 ---
 
 ## 1. Getting Started with Hugo
@@ -26,8 +29,8 @@ git clone https://github.com/Hin7zer/BrootHub.git themes/BrootHub
 
 ## 2. Configuring the Theme
 
-Configuration is handled through your Hugo config file (```config.yml```).
-An example can be found in the demo page under ```.demo/config.yml```aswell as demo pages.
+Configuration is handled through your Hugo config file (```config.yml```,```config.toml```.```hugo.toml```).
+An example can be found in the demo page under ```exampleSite/config.toml```aswell as demo pages.
 
 ## 3. Theme Shortcodes 
 
@@ -131,3 +134,17 @@ For full details, see the LICENSE
 
 This project was built from scratch by human, with selective use of AI for improvements, fixes, and optimizations.
 AI was used as a tool — not as a replacement for design, architecture, or creative decisions.
+
+## Author
+
+This theme was originally created by **Benjamin Hinz**.
+
+Original source:  
+https://github.com/Hin7zer/BrootHub
+
+Author profile:  
+https://github.com/Hin7zer
+
+### Attribution Requirement
+
+If you build upon this project, please give proper credit by linking back to the original repository and naming the original author.
