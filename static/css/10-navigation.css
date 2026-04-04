@@ -6,11 +6,11 @@
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background: var(--background-accent-color);
+    background: color-mix(in srgb, var(--background-color), black 20%);
 }
 
 .dark-mode .nav-container {
-    background: var(--dark-background-accent-color);
+    background: color-mix(in srgb, var(--background-color-dark-mode), white 20%);
 }
 
 .nav-left {
@@ -36,7 +36,7 @@
 
 .nav-menu a {
     text-decoration: none;
-    color: var(--primary-color);
+    color: var(--menu-color, var(--primary-color));
     font-weight: 600;
     font-size: 16px;
     position: relative;
@@ -49,7 +49,7 @@
     display: block;
     height: 3px;
     width: 0;
-    background: var(--primary-color);
+    background: var(--menu-color, var(--primary-color));
     transition: width 0.3s ease-in-out;
     position: absolute;
     left: 50%;
@@ -57,8 +57,12 @@
     transform: translateX(-50%);
 }
 
+.dark-mode .nav-menu a::after {
+    background: var(--menu-color-dark-mode, var(--primary-color));
+}
+
 .nav-menu a:hover {
-    color: var(--link-hover-color);
+    color: color-mix(in srgb, var(--menu-color, var(--primary-color)), black 20%);
 }
 
 .nav-menu a:hover::after {
@@ -81,15 +85,15 @@
 }
 
 .burger-menu:hover div {
-    background: var(--link-hover-color);
+    background: color-mix(in srgb, var(--text-color), white 20%);
 }
 
 .dark-mode .burger-menu div {
-    background: var(--dark-text-color);
+    background: var(--text-color-dark-mode);
 }
 
 .dark-mode .burger-menu:hover div {
-    background: var(--link-hover-color);
+    background: color-mix(in srgb, var(--text-color-dark-mode), black 20%);
 }
 
 /* Burger Menu Transparency animation */
@@ -112,7 +116,7 @@
     right: -100%;
     width: 250px;
     height: 100%;
-    background: var(--background-accent-color);
+    background: color-mix(in srgb, var(--background-color), black 20%);
     box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
     padding: 20px;
     display: flex;
@@ -126,7 +130,7 @@
 }
 
 .dark-mode .nav-menu-container {
-    background: var(--dark-background-accent-color);
+    background: color-mix(in srgb, var(--background-color-dark-mode), white 20%);
 }
 
 .nav-menu-container::-webkit-scrollbar {
@@ -163,7 +167,7 @@
     position: absolute;
     top: 100%;
     left: 0;
-    background: var(--submenu-background-color);
+    background: color-mix(in srgb, var(--background-color), black 20%);
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     z-index: 1000;
     min-width: 150px;
@@ -173,21 +177,29 @@
     display: block;
     padding: 10px;
     text-decoration: none;
-    background: var(--submenu-background-color);
-    color: var(--primary-color);
+    background: color-mix(in srgb, var(--background-color), black 20%);
+    color: var(--menu-color, var(--primary-color));
+}
+
+.dark-mode .submenu a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    background: color-mix(in srgb, var(--background-color-dark-mode), white 20%);
+    color: var(--menu-color-dark-mode, var(--primary-color));
 }
 
 .submenu a:hover {
-    background: var(--submenu-hover-color);
+    background: color-mix(in srgb, var(--background-color), black 20%);
 }
 
 .dark-mode .submenu {
-    background: var(--dark-submenu-background-color);
-    color: var(--dark-text-color);
+    background: color-mix(in srgb, var(--background-color-dark-mode), white 20%);
+    color: var(--menu-color-dark-mode, var(--primary-color));
 }
 
 .dark-mode .submenu a:hover {
-    background: var(--dark-submenu-hover-color);
+    background: color-mix(in srgb, var(--background-color-dark-mode), white 20%);
 }
 
 /* Submenu in Burger Menu */
@@ -195,7 +207,7 @@
     padding: 8px 15px;
     margin-left: 15px;
     font-size: 16px;
-    color: var(--primary-color);
+    color: var(--menu-color, var(--primary-color));
     display: flex;
     align-items: center;
     gap: 8px;
@@ -206,7 +218,7 @@
 .burger-nav-item {
     padding: 10px 15px;
     font-size: 18px;
-    color: var(--primary-color);
+    color: var(--menu-color, var(--primary-color));
     font-weight: bold;
     text-decoration: none;
     display: block;
@@ -216,13 +228,13 @@
 
 .burger-nav-item:hover {
     transform: translateX(5px);
-    color: var(--link-hover-color);
+    color: color-mix(in srgb, var(--menu-color, var(--primary-color)), black 20%);
 }
 
 /* Hover-Animation at Submenu points */
 .burger-submenu-item:hover {
     transform: translateX(5px);
-    color: var(--link-hover-color);
+    color: color-mix(in srgb, var(--menu-color, var(--primary-color)), black 20%);
 }
 
 /* Submenu points with line below */
@@ -230,7 +242,7 @@
     content: "";
     width: 4px;
     height: 16px;
-    background-color: var(--primary-color);
+    background-color: var(--menu-color, var(--primary-color));
     display: inline-block;
     position: absolute;
     left: 0;
@@ -240,24 +252,24 @@
 
 /* Dark Mode Changes */
 .dark-mode .nav-menu a {
-    background-color: var(--dark-submenu-background-color);
-    color: var(--primary-color);
+    background-color: color-mix(in srgb, var(--background-color-dark-mode), white 20%);
+    color: var(--menu-color-dark-mode, var(--primary-color));
 }
 
 .dark-mode .nav-menu a:hover {
-    color: var(--link-hover-color);
+    color: color-mix(in srgb, var(--menu-color-dark-mode, var(--primary-color)), white 20%);
 }
 
 .dark-mode .burger-submenu-item {
-    color: var(--primary-color);
+    color: var(--menu-color-dark-mode, var(--primary-color));
 }
 
 .dark-mode .burger-submenu-item::before {
-    background-color: var(--primary-color);
+    background-color: var(--menu-color-dark-mode, var(--primary-color));
 }
 
 .dark-mode .burger-submenu-item:hover {
-    color: var(--link-hover-color);
+    color: color-mix(in srgb, var(--menu-color-dark-mode, var(--primary-color)), white 20%);
 }
 
 /* ===================================
@@ -266,13 +278,24 @@
 
 .nav-menu-container a,
 .burger-nav-item {
-    color: var(--primary-color);
+    color: var(--menu-color, var(--primary-color));
+}
+
+.dark-mode .nav-menu-container a,
+.dark-mode .burger-nav-item {
+    color: var(--menu-color-dark-mode, var(--primary-color));
 }
 
 .nav-menu-container a:hover,
 .burger-nav-item:hover {
-    color: var(--link-hover-color);
+    color: color-mix(in srgb, var(--menu-color, var(--primary-color)), black 20%);
 }
+
+.dark-mode .nav-menu-container a:hover,
+.dark-mode .burger-nav-item:hover {
+    color: color-mix(in srgb, var(--menu-color-dark-mode, var(--primary-color)), white 20%);
+}
+
 
 @media (max-width: 768px) {
     .burger-menu {

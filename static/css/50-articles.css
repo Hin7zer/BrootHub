@@ -9,22 +9,22 @@
 }
 
 .dark-mode .article-container {
-    background-color: var(--dark-background-color);
+    background-color: var(--background-color-dark-mode);
 }
 
 /* Article Box */
 .article-box {
     width: 90%;
     max-width: 800px;
-    background: var(--background-accent-color);
+    background: color-mix(in srgb, var(--background-color), black 10%);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     padding: 2rem;
-    border: 1px solid var(--background-accent-color);
+    border: 1px solid color-mix(in srgb, var(--background-color), black 10%);
 }
 
 .dark-mode .article-box {
-    background: var(--dark-background-accent-color);
+    background: color-mix(in srgb, var(--background-color-dark-mode), white 20%);
     color: var(--dark-text-color);
-    border-color: var(--dark-background-accent-color);
+    border-color: color-mix(in srgb, var(--background-color-dark-mode), white 20%);
 }

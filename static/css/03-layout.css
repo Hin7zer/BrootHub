@@ -1,37 +1,33 @@
 @import url("00-vars.css");
 
 /* General Box-Styles */
-.article-container,
-.home-container {
+.article-container {
     display: flex;
     justify-content: center;
     padding: 3rem 0;
-    background-color: var(--background-accent-color);
+    background-color: color-mix(in srgb, var(--background-color), black 10%);
     min-height: 100vh;
     z-index: 1;
 }
 
-.dark-mode .article-container,
-.dark-mode .home-container {
-    background-color: var(--dark-background-color);
+.dark-mode .article-container {
+    background-color: var(--background-color-dark-mode);
 }
 
-.article-box,
-.home-box {
+.article-box {
     width: 90%;
     max-width: 800px;
-    background: var(--background-accent-color);
+    background: color-mix(in srgb, var(--background-color), black 10%);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     padding: 2rem;
-    border: 1px solid var(--background-accent-color);
+    border: 1px solid color-mix(in srgb, var(--background-color), black 10%);
 }
 
-.dark-mode .article-box,
-.dark-mode .home-box {
-    background: var(--background-color);
-    color: var(--dark-text-color);
-    border-color: var(--background-accent-color);
+.dark-mode .article-box {
+    background: var(--background-color-dark-mode);
+    color: var(--text-color-dark-mode);
+    border-color: color-mix(in srgb, var(--background-color-dark-mode), black 10%);
 }
 
 /* Article-Styles */
@@ -52,6 +48,12 @@
 
 .post-title:hover {
     text-decoration: underline;
+    color: color-mix(in srgb, var(--primary-color), black 20%);
+}
+
+.dark-mode .post-title:hover {
+    text-decoration: underline;
+    color: color-mix(in srgb, var(--primary-color), white 20%);
 }
 
 .article-date,
@@ -63,7 +65,7 @@
 
 .dark-mode .article-date,
 .dark-mode .post-date {
-    color: var(--dark-text-color);
+    color: var(--text-color-dark-mode);
 }
 
 .article-content,
@@ -74,20 +76,7 @@
 
 .dark-mode .article-content,
 .dark-mode .post-summary {
-    color: var(--dark-text-color);
-}
-
-/* Home-Styles */
-.home-headline {
-    text-align: center;
-    font-size: 2rem;
-    font-weight: bold;
-    color: var(--primary-color);
-    margin-bottom: 2rem;
-}
-
-.dark-mode .home-headline {
-    color: var(--primary-color);
+    color: var(--text-color-dark-mode);
 }
 
 .content-box {
@@ -99,8 +88,8 @@
 }
 
 .dark-mode .content-box {
-    background: var(--dark-background-color);
-    color: var(--dark-text-color);
+    background: var(--background-color-dark-mode);
+    color: var(--text-color-dark-mode);
 }
 
 /*Layouts */

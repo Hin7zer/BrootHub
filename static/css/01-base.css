@@ -13,23 +13,67 @@ body {
 
 /* Dark Mode */
 .dark-mode {
-    background-color: var(--dark-background-color);
-    color: var(--dark-text-color);
+    background-color: var(--background-color-dark-mode);
+    color: var(--text-color-dark-mode);
 }
 
 /* Logo-Text */
 .logo-text {
     font-size: 1.5rem;
     font-weight: bold;
-    color: var(--text-color);
+    color: var(--brand-color, var(--text-color));
 }
 
-/* Dark Mode Logo-Text */
 .dark-mode .logo-text {
-    color: var(--dark-text-color);
+    color: var(--brand-color-dark-mode, var(--text-color-dark-mode));
+}
+
+.footer-color {
+    color: var(--footer-color, var(--primary-color));
+}
+
+.dark-mode .footer-color {
+    color: var(--footer-color-dark-mode, var(--primary-color));
+}
+
+.menu-color {
+    color: var(--menu-color, var(--primary-color));
+}
+
+.dark-mode .menu-color {
+    color: var(--menu-color-dark-mode, var(--primary-color));
 }
 
 a {
     color: var(--link-color);
     text-decoration: none;
+}
+
+.dark-mode a {
+    color: var(--link-color-dark-mode);
+    text-decoration: none;
+}
+
+a:hover {
+    color: color-mix(in srgb, var(--link-color), white 20%);
+}
+
+a.footer-color:hover {
+    color: color-mix(in srgb, var(--footer-color, var(--primary-color)), black 20%);
+}
+
+.dark-mode a:hover {
+    color: color-mix(in srgb, var(--link-color-dark-mode), white 20%);
+}
+
+a.menu-color:hover {
+    color: color-mix(in srgb, var(--menu-color, var(--primary-color)), black 20%);
+}
+
+.dark-mode a.footer-color:hover {
+    color: color-mix(in srgb, var(--footer-color-dark-mode, var(--primary-color)), white 20%);
+}
+
+.dark-mode a.menu-color:hover {
+    color: color-mix(in srgb, var(--menu-color-dark-mode, var(--primary-color)), white 20%);
 }

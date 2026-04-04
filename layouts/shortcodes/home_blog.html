@@ -1,15 +1,18 @@
 {{ partial "styles.html" . }}
-<center><div class="list-layout"></center>
-          {{ range (where site.RegularPages "Section" "posts") }}
-            <article class="content-box">
-              <h2>
-                <a href="{{ .RelPermalink }}" class="post-title">{{ .Title }}</a>
-              </h2>
-              <p class="post-date">{{ .Date.Format "02.01.2006" }}</p>
-              <p class="post-summary">{{ .Summary | truncate 250 }}</p>
-              <div class="post-divider"></div>
-            </article><p></p>
-          {{ end }}
-        </div>
+<center>
+  <div class="list-layout">
+</center>
+{{ range (where site.RegularPages "Section" "posts") }}
+<article class="content-box">
+  <h2>
+    <a href="{{ .RelPermalink }}" class="post-title">{{ .Title }}</a>
+  </h2>
+  <p class="post-date">{{ .Date.Format "02.01.2006" }}</p>
+  <p class="post-summary">{{ .Summary | truncate 250 }}</p>
+  <div class="post-divider"></div>
+</article>
+<p></p>
+{{ end }}
+</div>
 
-  </div>
+</div>

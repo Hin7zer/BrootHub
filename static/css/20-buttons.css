@@ -4,8 +4,8 @@
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: var(--button-background-color);
-    color: var(--button-default-color);
+    background-color: var(--button-color);
+    color: var(--button-text-color, var(--text-color));
     border: none;
     padding: 10px 15px;
     border-radius: 5px;
@@ -17,13 +17,22 @@
     z-index: 1002;
 }
 
+.dark-mode #scrollTopBtn {
+    background-color: var(--button-color-dark-mode);
+    color: var(--button-text-color-dark-mode, var(--text-color-dark-mode));
+}
+
 #scrollTopBtn.visible {
     opacity: 1;
     pointer-events: auto;
 }
 
 #scrollTopBtn:hover {
-    background-color: var(--button-hover-color);
+    background-color: color-mix(in srgb, var(--button-color), white 20%);
+}
+
+.dark-mode #scrollTopBtn:hover {
+    background-color: color-mix(in srgb, var(--button-color-dark-mode), black 20%);
 }
 
 /* Dark Mode Toggle */
@@ -38,5 +47,30 @@
 }
 
 .dark-mode #darkModeToggle {
-    border-color: var(--background-color);
+    border-color: color-mix(in srgb, var(--text-color-dark-mode), white 20%);
+}
+
+.button-general {
+    border: 2px solid var(--button-color);
+    background-color: var(--button-color);
+    color: var(--button-text-color, var(--text-color));
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.dark-mode .button-general {
+    border-color: var(--button-color-dark-mode);
+    background-color: var(--button-color-dark-mode);
+    color: var(--button-text-color-dark-mode, var(--text-color-dark-mode));
+}
+
+.button-general:hover {
+    background-color: color-mix(in srgb, var(--button-color), white 20%);
+}
+
+.dark-mode .button-general:hover {
+    background-color: color-mix(in srgb, var(--button-color-dark-mode), black 20%);
 }

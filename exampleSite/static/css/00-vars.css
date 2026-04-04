@@ -1,0 +1,24 @@
+:root {
+    --primary-color: #5b5bd6;
+
+    --brand-color: #d946ef;
+    --brand-color-dark-mode: #f0abfc;
+
+    --background-color: #f8fafc;
+    --background-color-dark-mode: #0f172a;
+
+    --text-color: #0f172a;
+    --text-color-dark-mode: #e2e8f0;
+
+    --link-color: #0ea5a4;
+    --link-color-dark-mode: #5eead4;
+
+    --button-color: #f59e0b;
+    --button-color-dark-mode: #000000;
+
+    --menu-color: #5b5bd6;
+    --menu-color-dark-mode: #a5b4fc;
+
+    --footer-color: #64748b;
+    --footer-color-dark-mode: #94a3b8;
+}

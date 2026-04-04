@@ -1,21 +1,37 @@
 /* CSS Vars */
+/* Explanation:
+
+Required + Predefined Variable colors
+primary-color:                  Used for Headlines,Menu items. 
+background-color:               Basic Background color. Objects refer to this! Some elements like the menu bar or the content box refer to this. Example Menu bar has the color of the background + 20% black color (is automatically darker)
+background-color-dark-mode:     Basic Background color. Objects refer to this! Some elements like the menu bar or the content box refer to this. Example Menu bar has the color of the background + 20% white color (is automatically brighter) on dark mode
+text-color:                     Basic Text color used also for logo if specific brand-color is not set
+text-color-dark-mode:           Basic Text color used also for logo if specific brand-color-dark-mode is not set on dark mode
+link-color:                     Link color. This is also used automatically and adapted like darker or brighter on actions like hovering
+link-color-dark-mode:           Link color. This is also used automatically and adapted like darker or brighter on actions like hovering on darkmode
+button-color:                   Basic button color. Is automatically adjusted on actions like hovering. Some buttons might not have this color due to shortcodes.
+button-color-dark-mode:         Basic button color. Is automatically adjusted on actions like hovering. Some buttons might not have this color due to shortcodes. On dark mode
+
+Optional Variable colors
+brand-color-dark-mode:          Branding color for currently only Logo text which is optional. Is by default text color
+brand-color:                    Branding color for currently only Logo text which is optional. Is by default text color - on dark mode
+button-text-color:              By default not required and text color is used. some other buttons from shortcodes might not use this var.
+button-text-color-dark-mode:    By default not required and text color is used. some other buttons from shortcodes might not use this var. dark mode.
+menu-color:                     By default not required and primary color is used. Can be specified to separate colors of menu items (not footer menu)
+menu-color-dark-mode:           By default not required and primary color is used. Can be specified to separate colors of menu items (not footer menu) - dark mode
+footer-color:                   By default not required and primary color is used. Can be specified to separate colors of footer items (including footer menu, legal entities etc.)
+footer-color-dark-mode:         By default not required and primary color is used. Can be specified to separate colors of footer items (including footer menu, legal entities etc.) - dark mode
+*/
 :root {
     --primary-color: #ff7332;
-    --secondary-color: #d95e27;
-    --accent-color: #27d927;
+    /*  --brand-color: #ec0000;         */
+    /*  --brand-color-dark-mode: #ec0000;         */
     --background-color: #ffffff;
-    --background-accent-color: #e6e6e6;
-    --dark-background-color: #1a1a1a;
-    --dark-background-accent-color: #272727;
+    --background-color-dark-mode: #333333;
     --text-color: #000000;
-    --link-color: #ff8c42;
-    --link-hover-color: #ff8c42;
-    --dark-text-color: #ffffff;
-    --submenu-background-color: #dbdbdb;
-    --submenu-hover-color: #777777;
-    --dark-submenu-background-color: #393939;
-    --dark-submenu-hover-color: #777777;
-    --button-background-color: #5c5c5c;
-    --button-default-color: #ffffff;
-    --button-hover-color: #670000;
+    --text-color-dark-mode: #ffffff;
+    --link-color: #3392ff;
+    --link-color-dark-mode: #3392ff;
+    --button-color: #848484;
+    --button-color-dark-mode: #7a7a7a;
 }

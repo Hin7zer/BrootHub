@@ -5,13 +5,17 @@ title = 'Home'
 +++
 
 ℹ️ **Demo Website Notice**  
-> This website is a non-commercial demonstration project for a Hugo theme.  
-> No real company or personal data is represented here.
-> The theme is developed under German legal requirements, therefore parts of the demo site are in German.
+> ```This website is a non-commercial demonstration project for a Hugo theme.```  
+> ```No real company or personal data is represented here.```
+> ```The theme is developed under German legal requirements, therefore parts of the demo site are in German.```
+
+> ```The displayed ``` **colors** ```are not final and are only intended to demonstrate which design aspects can be influenced by the available color configuration options.```
 
 ℹ️ **Hinweis zur Demo-Seite**  
-> Diese Website ist ein nicht-kommerzielles Demonstrationsprojekt für ein Hugo Theme.  
-> Es werden keine echten Unternehmens- oder Personendaten dargestellt.
+> ```Diese Website ist ein nicht-kommerzielles Demonstrationsprojekt für ein Hugo Theme.```
+> ```Es werden keine echten Unternehmens- oder Personendaten dargestellt.```
+
+> ```Die gezeigten``` **Farben** ```sind nicht final abgestimmt und dienen ausschließlich dazu zu veranschaulichen, welche Gestaltungsmöglichkeiten durch die jeweiligen Farbkonfigurationen beeinflusst werden können.```
 
 # 👋 Herzlich Willkommen
 
