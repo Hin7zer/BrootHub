@@ -2,7 +2,7 @@
 /* Explanation:
 
 Required + Predefined Variable colors
-primary-color:                  Used for Headlines,Menu items. 
+primary-color:                  Used for Headlines,Menu items. If often a default color for optional variables.
 background-color:               Basic Background color. Objects refer to this! Some elements like the menu bar or the content box refer to this. Example Menu bar has the color of the background + 20% black color (is automatically darker)
 background-color-dark-mode:     Basic Background color. Objects refer to this! Some elements like the menu bar or the content box refer to this. Example Menu bar has the color of the background + 20% white color (is automatically brighter) on dark mode
 text-color:                     Basic Text color used also for logo if specific brand-color is not set

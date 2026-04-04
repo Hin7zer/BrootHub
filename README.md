@@ -71,37 +71,9 @@ Shortcodes can be seen as templates. They contain html code and formatations to 
 
 The color layout of the theme is defined in: ```./static/css/00-vars.css```
 
-
-This file defines CSS variables for the theme’s color scheme.
+This file defines CSS variables for the theme’s color scheme. There are defaults values which can be overwritten. A description is in a comment in this file for more details.
 You may override these values with your own, but always review your custom file before upgrading to a new version.
 Otherwise, some elements may become invisible or hard to read.
-
-Example:
-
-```css
-/* CSS Variables */
-:root {
-    --primary-color: #ff7332;
-    --secondary-color: #d95e27;
-    --accent-color: #27d927;
-    --background-color: #ffffff;
-    --background-accent-color: #e6e6e6;
-    --dark-background-color: #1a1a1a;
-    --dark-background-accent-color: #272727;
-    --text-color: #000000;
-    --link-color: #ff8c42;
-    --link-hover-color: #ff8c42;
-    --dark-text-color: #ffffff;
-    --submenu-background-color: #dbdbdb;
-    --submenu-hover-color: #777777;
-    --dark-submenu-background-color: #393939;
-    --dark-submenu-hover-color: #777777;
-    --button-background-color: #5c5c5c;
-    --button-default-color: #ffffff;
-    --button-hover-color: #670000;
-}
-```
-
 
 ## 5. Running Hugo with the Theme
 
