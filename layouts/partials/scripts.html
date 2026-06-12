@@ -98,4 +98,20 @@
             }
         });
     });
+    // function for fixing menu point width and height if there are too much items for the screen
+    function adjustNavigation() {
+        const container = document.querySelector('.nav-container');
+        const navMenu = document.querySelector('.nav-menu');
+        const navLeft = document.querySelector('.nav-left');
+        const burger = document.querySelector('.burger-menu');
+        container.classList.remove('mobile-mode');
+        const requiredWidth = navLeft.offsetWidth + navMenu.scrollWidth + 40;
+        const availableWidth = container.offsetWidth;
+        if (requiredWidth > availableWidth) {
+            container.classList.add('mobile-mode');
+        }
+    }
+
+    window.addEventListener('resize', adjustNavigation);
+    document.addEventListener('DOMContentLoaded', adjustNavigation);
 </script>

@@ -112,12 +112,30 @@
 /* Responsive Changes */
 
 
-@media (max-width: 640px) {
-    .grid-layout {
-        grid-template-columns: 1fr;
-    }
+/* Prevent multiple (too much) menu items from layout issues */
 
-    .grid-layout> :nth-last-child(1):nth-child(odd) {
-        grid-column: span 1;
-    }
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.nav-menu {
+    display: flex;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+}
+
+.nav-container.mobile-mode .nav-menu {
+    display: none;
+}
+
+.nav-container.mobile-mode .burger-menu {
+    display: flex;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
 }
