@@ -1,0 +1,12 @@
+/*default classes, easy to override*/
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+th,
+td {
+    border: 1px solid var(--text-color);
+    padding: 0.75rem;
+    text-align: left;
+}

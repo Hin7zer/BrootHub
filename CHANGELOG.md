@@ -13,10 +13,9 @@ initial version
 
 ## Version 1.0.2
 
-* fixed main menu layout issues on too much items
+* fixed multiple main menu (and submenu item) layout issues on too much items/ long width
 * fixed vanished last main menu item on small screens
+* fixed logo issues in burger menu
+* fixed hover issue on subemu items
 * added image default css settings
-
-**Known Issues:**
-
-* Main menu: Subitems not visible in current version
+* modified css structure
