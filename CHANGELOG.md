@@ -17,5 +17,8 @@ initial version
 * fixed vanished last main menu item on small screens
 * fixed logo issues in burger menu
 * fixed hover issue on subemu items
+* fixed missing tabindex on shortcodes
+* added optional variables for dark-mode
 * added image default css settings
 * modified css structure
+* modified dark-mode script

@@ -5,7 +5,7 @@
 {{ range (where site.RegularPages "Section" "posts") }}
 <article class="content-box">
   <h2>
-    <a href="{{ .RelPermalink }}" class="post-title">{{ .Title }}</a>
+    <a href="{{ .RelPermalink }}" class="post-title" tabindex="0">{{ .Title }}</a>
   </h2>
   <p class="post-date">{{ .Date.Format "02.01.2006" }}</p>
   <p class="post-summary">{{ .Summary | truncate 250 }}</p>

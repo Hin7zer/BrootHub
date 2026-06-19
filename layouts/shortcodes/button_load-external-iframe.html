@@ -2,7 +2,7 @@
     {{< button_load-external-url-as-iframe url="https://example.invalid" button_title="Button Text" overlay_title="External Website" >}}
 */}}
 <div style="text-align:center; margin:1rem 0;">
-    <button id="btn-{{ .Ordinal }}" class="button-general">
+    <button id="btn-{{ .Ordinal }}" class="button-general" tabindex="0">
         {{ .Get 0 }}
     </button>
 </div>

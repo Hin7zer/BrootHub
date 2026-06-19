@@ -4,13 +4,16 @@
     <div class="nav-left">
         <a href="{{ site.BaseURL }}" class="nav-logo">
             {{ if site.Params.LogoPicture }}
-            <img src="{{ site.Params.LogoPicture }}" alt="Logo" style="max-height: 50px;">
+            <img src="{{ site.Params.LogoPicture }}" alt="Logo" style="max-height: 50px;" tabindex="0">
             {{ else if site.Params.LogoText }}
-            <span class="logo-text">{{ site.Params.LogoText }}</span>
+            <span class="logo-text" tabindex="0">{{ site.Params.LogoText }}</span>
             {{ else }}
             <span class="logo-text">Undefined</span>
             {{ end }}
-        </a> <button id="darkModeToggle" aria-label="Dark-Mode" aria-pressed="false">🌙</button>
+        </a>
+        {{ if ne site.Params.DarkModeButtonEnabled false }}
+        <button id="darkModeToggle" aria-label="Dark-Mode" aria-pressed="false">🌙</button>
+        {{ end }}
     </div>
     <nav>
         <div class="nav-menu">
