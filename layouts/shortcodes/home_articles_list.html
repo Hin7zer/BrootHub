@@ -9,7 +9,7 @@
   <img src="{{ . }}" alt="{{ $.Title }}" style="max-width: 100%; border-radius: 8px; margin-bottom: 10px;">
   {{ end }}
   <h2>
-    <a href="{{ .RelPermalink }}" class="post-title">{{ .Title }}</a>
+    <a href="{{ .RelPermalink }}" class="post-title" tabindex="0">{{ .Title }}</a>
   </h2>
   <p class="post-summary">{{ .Summary | truncate 100 }}</p>
 </div>

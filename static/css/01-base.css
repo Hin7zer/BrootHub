@@ -1,5 +1,3 @@
-@import url("00-vars.css");
-
 /* General Styles */
 body {
     font-family: Arial, sans-serif;
@@ -77,3 +75,599 @@ a.menu-color:hover {
 .dark-mode a.menu-color:hover {
     color: color-mix(in srgb, var(--menu-color-dark-mode, var(--primary-color)), white 20%);
 }
+
+
+/* Prevent multiple (too much) menu items from layout issues */
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: visible;
+}
+
+.nav-menu {
+    display: flex;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+}
+
+.nav-container.mobile-mode .nav-menu {
+    display: none;
+}
+
+.nav-container.mobile-mode .burger-menu {
+    display: flex;
+}
+
+.nav-item:last-child .submenu {
+    left: auto;
+    right: 0;
+}
+
+/* Box-Styles */
+.article-container {
+    display: flex;
+    justify-content: center;
+    padding: 3rem 0;
+    background-color: color-mix(in srgb, var(--background-color), black 10%);
+    min-height: 100vh;
+    z-index: 1;
+}
+
+.dark-mode .article-container {
+    background-color: var(--background-color-dark-mode);
+}
+
+.article-box {
+    width: 90%;
+    max-width: 800px;
+    background: color-mix(in srgb, var(--background-color), black 10%);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 2rem;
+    border: 1px solid color-mix(in srgb, var(--background-color), black 10%);
+}
+
+.dark-mode .article-box {
+    background: var(--background-color-dark-mode);
+    color: var(--text-color-dark-mode);
+    border-color: color-mix(in srgb, var(--background-color-dark-mode), black 10%);
+}
+
+/* Article-Styles */
+.article-title,
+.post-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 1rem;
+    text-decoration: none;
+}
+
+.dark-mode .article-title,
+.dark-mode .post-title {
+    color: var(--primary-color);
+}
+
+.post-title:hover {
+    text-decoration: underline;
+    color: color-mix(in srgb, var(--primary-color), black 20%);
+}
+
+.dark-mode .post-title:hover {
+    text-decoration: underline;
+    color: color-mix(in srgb, var(--primary-color), white 20%);
+}
+
+.article-date,
+.post-date {
+    text-align: center;
+    color: var(--text-color);
+    font-size: 0.875rem;
+}
+
+.dark-mode .article-date,
+.dark-mode .post-date {
+    color: var(--text-color-dark-mode);
+}
+
+.article-content,
+.post-summary {
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.dark-mode .article-content,
+.dark-mode .post-summary {
+    color: var(--text-color-dark-mode);
+}
+
+.content-box {
+    padding: 1.5rem;
+    border-radius: 8px;
+    background: var(--background-color);
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.dark-mode .content-box {
+    background: var(--background-color-dark-mode);
+    color: var(--text-color-dark-mode);
+}
+
+/* Article Container */
+.article-container {
+    display: flex;
+    justify-content: center;
+    padding: 3rem 0;
+    background-color: var(--background-color);
+    min-height: 100vh;
+    z-index: 1;
+}
+
+.dark-mode .article-container {
+    background-color: var(--background-color-dark-mode);
+}
+
+/* Article Box */
+.article-box {
+    width: 90%;
+    max-width: 800px;
+    background: color-mix(in srgb, var(--background-color), black 10%);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 2rem;
+    border: 1px solid color-mix(in srgb, var(--background-color), black 10%);
+}
+
+.dark-mode .article-box {
+    background: color-mix(in srgb, var(--background-color-dark-mode), white 20%);
+    color: var(--dark-text-color);
+    border-color: color-mix(in srgb, var(--background-color-dark-mode), white 20%);
+}
+
+/*Layouts */
+.grid-layout {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.grid-layout> :nth-last-child(1):nth-child(odd) {
+    grid-column: span 2;
+}
+
+.list-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* Navigation Start */
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: color-mix(in srgb, var(--background-color), black 20%);
+}
+
+.dark-mode .nav-container {
+    background: color-mix(in srgb, var(--background-color-dark-mode), white 20%);
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+}
+
+.nav-logo img {
+    max-height: 60px;
+    height: auto;
+}
+
+.nav-controls {
+    display: flex;
+    align-items: center;
+}
+
+/* Main Menu */
+.nav-menu {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: var(--menu-color, var(--primary-color));
+    font-weight: 600;
+    font-size: 16px;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+/* Animated Lines below Main Menu points */
+.nav-menu a::after {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 0;
+    background: var(--menu-color, var(--primary-color));
+    transition: width 0.3s ease-in-out;
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    transform: translateX(-50%);
+}
+
+.dark-mode .nav-menu a::after {
+    background: var(--menu-color-dark-mode, var(--primary-color));
+}
+
+.nav-menu>.nav-item>a {
+    display: inline-block;
+}
+
+.nav-menu a::after {
+    z-index: 9999;
+}
+
+.nav-menu a:hover {
+    color: color-mix(in srgb, var(--menu-color, var(--primary-color)), black 20%);
+}
+
+.nav-menu a:hover::after {
+    width: 100%;
+}
+
+/* Burger Menu */
+.burger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+.burger-menu div {
+    width: 25px;
+    height: 3px;
+    background: var(--text-color);
+    margin: 5px;
+}
+
+.burger-menu:hover div {
+    background: color-mix(in srgb, var(--text-color), white 20%);
+}
+
+.dark-mode .burger-menu div {
+    background: var(--text-color-dark-mode);
+}
+
+.dark-mode .burger-menu:hover div {
+    background: color-mix(in srgb, var(--text-color-dark-mode), black 20%);
+}
+
+/* Burger Menu Transparency animation */
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    transition: opacity 0.3s;
+    z-index: 1000;
+}
+
+.nav-menu-container {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 250px;
+    height: 100%;
+    background: color-mix(in srgb, var(--background-color), black 20%);
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    transition: right 0.3s ease-in-out;
+    z-index: 1001;
+    overflow-y: auto;
+    /* Scroll if size is too large */
+    max-height: 100vh;
+    /* max height must be 100% */
+}
+
+.dark-mode .nav-menu-container {
+    background: color-mix(in srgb, var(--background-color-dark-mode), white 20%);
+}
+
+.nav-menu-container::-webkit-scrollbar {
+    width: 6px;
+}
+
+.nav-menu-container::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+}
+
+.nav-menu-container.active {
+    right: 0;
+}
+
+.nav-menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 10px;
+
+}
+
+.nav-menu-header .nav-logo {
+    min-width: 0;
+    flex: 1;
+}
+
+.nav-menu-header .logo-text {
+    display: block;
+    white-space: normal;
+    overflow-wrap: break-word;
+}
+
+/* Submenu */
+.nav-item {
+    position: relative;
+}
+
+.has-submenu a {
+    cursor: pointer;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+
+    min-width: 100%;
+    max-width: 250px;
+    width: max-content;
+
+    background: color-mix(in srgb, var(--background-color), black 20%);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.submenu a {
+    display: block;
+    padding: 10px;
+
+    white-space: normal;
+    overflow-wrap: break-word;
+    word-break: normal;
+}
+
+.dark-mode .submenu a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    background: color-mix(in srgb, var(--background-color-dark-mode), white 20%);
+    color: var(--menu-color-dark-mode, var(--primary-color));
+}
+
+.submenu a:hover {
+    background: color-mix(in srgb, var(--background-color), black 20%);
+}
+
+.dark-mode .submenu {
+    background: color-mix(in srgb, var(--background-color-dark-mode), white 20%);
+    color: var(--menu-color-dark-mode, var(--primary-color));
+
+}
+
+.dark-mode .submenu a:hover {
+    background: color-mix(in srgb, var(--background-color-dark-mode), white 20%);
+}
+
+/* Submenu in Burger Menu */
+.burger-submenu-item {
+    padding: 8px 15px;
+    margin-left: 15px;
+    font-size: 16px;
+    color: var(--menu-color, var(--primary-color));
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    position: relative;
+    transition: transform 0.2s ease-in-out;
+    overflow-wrap: break-word;
+    white-space: normal;
+}
+
+.burger-nav-item {
+    padding: 10px 15px;
+    font-size: 18px;
+    color: var(--menu-color, var(--primary-color));
+    font-weight: bold;
+    text-decoration: none;
+    display: block;
+    position: relative;
+    transition: transform 0.2s ease-in-out, color 0.3s ease;
+    overflow-wrap: break-word;
+    white-space: normal;
+}
+
+
+
+.burger-nav-item:hover {
+    transform: translateX(5px);
+    color: color-mix(in srgb, var(--menu-color, var(--primary-color)), black 20%);
+}
+
+/* Hover-Animation at Submenu points */
+.burger-submenu-item:hover {
+    transform: translateX(5px);
+    color: color-mix(in srgb, var(--menu-color, var(--primary-color)), black 20%);
+}
+
+/* Submenu points with line below */
+.burger-submenu-item::before {
+    content: "";
+    width: 4px;
+    height: 16px;
+    background-color: var(--menu-color, var(--primary-color));
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.burger-submenu-item,
+.burger-submenu-item a {
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+/* Dark Mode Changes */
+.dark-mode .nav-menu a {
+    background-color: color-mix(in srgb, var(--background-color-dark-mode), white 20%);
+    color: var(--menu-color-dark-mode, var(--primary-color));
+}
+
+.dark-mode .nav-menu a:hover {
+    color: color-mix(in srgb, var(--menu-color-dark-mode, var(--primary-color)), white 20%);
+}
+
+.dark-mode .burger-submenu-item {
+    color: var(--menu-color-dark-mode, var(--primary-color));
+}
+
+.dark-mode .burger-submenu-item::before {
+    background-color: var(--menu-color-dark-mode, var(--primary-color));
+}
+
+.dark-mode .burger-submenu-item:hover {
+    color: color-mix(in srgb, var(--menu-color-dark-mode, var(--primary-color)), white 20%);
+}
+
+/* ===================================
+   Link in Burger Menu Color Management
+==================================== */
+
+.nav-menu-container a,
+.burger-nav-item {
+    color: var(--menu-color, var(--primary-color));
+}
+
+.dark-mode .nav-menu-container a,
+.dark-mode .burger-nav-item {
+    color: var(--menu-color-dark-mode, var(--primary-color));
+}
+
+.nav-menu-container a:hover,
+.burger-nav-item:hover {
+    color: color-mix(in srgb, var(--menu-color, var(--primary-color)), black 20%);
+}
+
+.dark-mode .nav-menu-container a:hover,
+.dark-mode .burger-nav-item:hover {
+    color: color-mix(in srgb, var(--menu-color-dark-mode, var(--primary-color)), white 20%);
+}
+
+
+@media (max-width: 768px) {
+    .burger-menu {
+        display: flex;
+    }
+
+    .nav-menu {
+        display: none;
+    }
+}
+
+/* Navigation End */
+
+
+/* Buttons Start */
+#scrollTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--button-color);
+    color: var(--button-text-color, var(--text-color));
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 1002;
+}
+
+.dark-mode #scrollTopBtn {
+    background-color: var(--button-color-dark-mode);
+    color: var(--button-text-color-dark-mode, var(--text-color-dark-mode));
+}
+
+#scrollTopBtn.visible {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+#scrollTopBtn:hover {
+    background-color: color-mix(in srgb, var(--button-color), white 20%);
+}
+
+.dark-mode #scrollTopBtn:hover {
+    background-color: color-mix(in srgb, var(--button-color-dark-mode), black 20%);
+}
+
+/* Dark Mode Toggle */
+#darkModeToggle {
+    margin-left: 10px;
+    background-color: transparent;
+    border: 2px solid var(--text-color);
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.dark-mode #darkModeToggle {
+    border-color: color-mix(in srgb, var(--text-color-dark-mode), white 20%);
+}
+
+.button-general {
+    border: 2px solid var(--button-color);
+    background-color: var(--button-color);
+    color: var(--button-text-color, var(--text-color));
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.dark-mode .button-general {
+    border-color: var(--button-color-dark-mode);
+    background-color: var(--button-color-dark-mode);
+    color: var(--button-text-color-dark-mode, var(--text-color-dark-mode));
+}
+
+.button-general:hover {
+    background-color: color-mix(in srgb, var(--button-color), white 20%);
+}
+
+.dark-mode .button-general:hover {
+    background-color: color-mix(in srgb, var(--button-color-dark-mode), black 20%);
+}
+
+/* Buttons End */

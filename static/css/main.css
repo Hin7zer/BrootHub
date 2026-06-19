@@ -1,5 +1,3 @@
+@import url("00-vars.css");
 @import url("01-base.css");
-@import url("03-layout.css");
-@import url("10-navigation.css");
-@import url("20-buttons.css");
-@import url("50-articles.css");
+@import url("99-default-overrides.css");

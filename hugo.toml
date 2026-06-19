@@ -26,7 +26,9 @@ disableKinds = ["taxonomy", "term"]
   # LogoPicture = "/icon_demo.png" # Optional: if defined, this takes precedence over LogoText
   # HomeArticles: list of pages used in prebuilt shortcodes to display featured content on homepage
   HomeArticles = ["thank-you", "placeholder", "posts/post2"]
-
+  DarkModeEnabledByDefault = false # Optional but by default false
+  DarkModeButtonEnabled = true # Optional but by default true
+  
   [params.opengraph]
     enabled = true # Enable OpenGraph metadata
 
