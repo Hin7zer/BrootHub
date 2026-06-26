@@ -8,7 +8,7 @@ sitemap:
   disable: true
   priority: 0.1
 noindex: true
-
+hidedate: true
 ---
 <center>
 ⋆.˚✮𝕋𝕙𝕒𝕟𝕜 𝕪𝕠𝕦✮˚.⋆⠀

@@ -8,6 +8,7 @@ sitemap:
   disable: true
   priority: 0.1
 noindex: true
+hidedate: true
 ---
 ℹ️ **🇩🇪 Hinweis (Demo-Seite)**
 

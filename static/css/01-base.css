@@ -591,6 +591,29 @@ a.menu-color:hover {
     }
 }
 
+.footer-nav {
+    display: flex;
+    justify-content: center;
+    gap: 0;
+}
+
+.footer-item {
+    white-space: nowrap;
+    font-size: .8rem;
+}
+
+@media (max-width: 700px) {
+    .footer-nav {
+        display: block;
+        text-align: center;
+    }
+
+    .footer-item {
+        display: block;
+        margin: .3rem 0;
+    }
+}
+
 /* Navigation End */
 
 
