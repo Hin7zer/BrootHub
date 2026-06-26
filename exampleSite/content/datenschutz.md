@@ -1,5 +1,14 @@
 ---
 title: "Datenschutz"
+date: 2026-06-26
+draft: false
+description: "Diese Seite enthält Informationen zum Datenschutz"
+sitemap:
+  changefreq: weekly
+  disable: true
+  priority: 0.1
+noindex: true
+
 ---
 ℹ️ **🇩🇪 Hinweis (Demo-Seite)**
 

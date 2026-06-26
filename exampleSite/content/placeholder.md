@@ -1,6 +1,14 @@
 ---
 title: "Platzhalter"
-date: 2025-01-06
+date: 2026-06-26
+draft: false
+description: "Diese Seite enthält Informationen zum Anzeigen eines Beispiels"
+sitemap:
+  changefreq: weekly
+  disable: true
+  priority: 0.1
+noindex: true
+
 ---
 
 # Platzhalter Seite

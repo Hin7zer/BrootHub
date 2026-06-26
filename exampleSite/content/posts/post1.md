@@ -2,6 +2,11 @@
 title: "Blogeintrag vom 01.01.1900"
 date: 1900-01-01
 type: post
+sitemap:
+  changefreq: yearly
+  disable: true
+  priority: 0.1
+noindex: true
 ---
 
 Dies ist ein Beispiel-Blogeintrag aus dem Jahr **1900**.

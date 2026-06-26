@@ -12,6 +12,9 @@
 <meta http-equiv="X-Content-Type-Options" content="nosniff">
 {{ end }}
 
+{{ if .Params.noindex }}
+<meta name="robots" content="noindex, follow">
+{{ end }}
 
 <!-- SEO -->
 {{ if site.Params.seo.enabled }}
@@ -49,5 +52,7 @@
 {{ end }}
 
 {{ with site.Params.favicon }}
-<link rel="icon" type="image/x-icon" href="{{ . | relURL }}">
+<link rel="icon" href="{{ . | relURL }}">
+<link rel="icon" type="image/png" sizes="32x32" href="{{ . | relURL }}">
+<link rel="shortcut icon" href="{{ . | relURL }}">
 {{ end }}

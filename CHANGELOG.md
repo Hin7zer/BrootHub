@@ -22,3 +22,9 @@ initial version
 * added image default css settings
 * modified css structure
 * modified dark-mode script
+
+## Version 1.0.3
+
+* small changes to icon metadata
+* added noindex option for specific sites
+* changes on exampleSite

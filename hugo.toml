@@ -33,7 +33,7 @@ disableKinds = ["taxonomy", "term"]
     enabled = true # Enable OpenGraph metadata
 
   [params.seo]
-    enabled = false # Very basic SEO functionality, can be enabled
+    enabled = true # Very basic SEO functionality, can be enabled
 
 #  Example Parameter for security settings.
 #  [params.security]
