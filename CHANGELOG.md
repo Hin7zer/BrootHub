@@ -7,6 +7,8 @@
 * changes on exampleSite
 * added hide date in specific pages
 * fixed legal entity line break
+* removed favicon parameter
+* added favicons parameter for dynamical configurations
 
 ## Version 1.0.2
 

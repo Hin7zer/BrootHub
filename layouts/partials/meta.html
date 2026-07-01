@@ -51,8 +51,10 @@
 
 {{ end }}
 
-{{ with site.Params.favicon }}
-<link rel="icon" href="{{ . | relURL }}">
-<link rel="icon" type="image/png" sizes="32x32" href="{{ . | relURL }}">
-<link rel="shortcut icon" href="{{ . | relURL }}">
+{{ with site.Params.favicons }}
+{{ range . }}
+<link rel="{{ default "icon" .rel }}" {{ with .type }}type="{{ . }}" {{ end }} href="{{ .path | relURL }}" {{ with .sizes }}sizes="{{ . }}" {{ end }}>
+{{ end }}
+{{ else }}
+<link rel="icon" href="{{ "/favicon.ico" | relURL }}">
 {{ end }}
