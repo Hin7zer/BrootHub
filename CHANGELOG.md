@@ -1,15 +1,14 @@
 # Changelog
 
-## Version 1.0.0
+## Version 1.0.3
 
-initial version
-
-## Version 1.0.1
-
-* fixed color variables for better customization
-* changed color variable names
-* fixed some stylistic issues
-* removed/added some CSS classes
+* small changes to icon metadata
+* added noindex option for specific pages
+* changes on exampleSite
+* added hide date in specific pages
+* fixed legal entity line break
+* removed favicon parameter
+* added favicons parameter for dynamical configurations
 
 ## Version 1.0.2
 
@@ -22,3 +21,14 @@ initial version
 * added image default css settings
 * modified css structure
 * modified dark-mode script
+
+## Version 1.0.1
+
+* fixed color variables for better customization
+* changed color variable names
+* fixed some stylistic issues
+* removed/added some CSS classes
+
+## Version 1.0.0
+
+initial version

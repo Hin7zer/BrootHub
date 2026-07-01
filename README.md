@@ -32,6 +32,26 @@ git clone https://github.com/Hin7zer/BrootHub.git themes/BrootHub
 Configuration is handled through your Hugo config file (```config.yml```,```config.toml```.```hugo.toml```).
 An example can be found in the demo page under ```exampleSite/config.toml```aswell as demo pages.
 
+### 2.1 Custom Page Parameters
+
+The following custom page parameters are supported (content page example)
+
+```
+---
+date: 2026-06-26
+draft: false
+title: "Home"
+description: "Mainpage"
+sitemap:
+  changefreq: weekly
+  disable: false
+  priority: 1.0
+noindex: true       # This parameter is optional and adds a noindex in the meta field
+hidedate: true      # This parameter is optional and hides the date in pages 
+---
+...
+```
+
 ## 3. Theme Shortcodes 
 
 This theme provides a set of shortcodes to include standardized legal and contact information in your site. They are designed to work for companies, clubs, and private users, and can adapt to multiple languages. Currently only German is supported.

@@ -20,7 +20,6 @@ disableKinds = ["taxonomy", "term"]
 
 # Parameters for theme-specific functionality
 [params]
-  favicon = "/icon_demo.png"
   description = "Demo Page"
   LogoText = "NAME/LOGO" # Text logo; use LogoPicture instead if you want an image
   # LogoPicture = "/icon_demo.png" # Optional: if defined, this takes precedence over LogoText
@@ -28,12 +27,33 @@ disableKinds = ["taxonomy", "term"]
   HomeArticles = ["thank-you", "placeholder", "posts/post2"]
   DarkModeEnabledByDefault = false # Optional but by default false
   DarkModeButtonEnabled = true # Optional but by default true
-  
+
+
+[[params.favicons]]
+path = "/favicon.ico"
+
+### Default examples of favicon declarations, some sub parameters are optional, the following lines conatin examples and the default if favicons are not configured at all.
+#[[params.favicons]] ### default
+#path = "/favicon.ico" # always required
+#rel = "icon" # optional but default
+#type = "" # optional default 
+
+#[[params.favicons]] ### additional examples
+#path = "/favicon-96x96.png"
+#type = "image/png"
+#sizes = "96x96"
+#[[params.favicons]]
+#path = "/favicon.svg"
+#type = "image/svg+xml"
+#[[params.favicons]]
+#path = "/site.webmanifest"
+#rel = "manifest"
+
   [params.opengraph]
     enabled = true # Enable OpenGraph metadata
 
   [params.seo]
-    enabled = false # Very basic SEO functionality, can be enabled
+    enabled = true # Very basic SEO functionality, can be enabled
 
 #  Example Parameter for security settings.
 #  [params.security]

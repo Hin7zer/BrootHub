@@ -1,5 +1,14 @@
 ---
 title: "AGB"
+date: 2026-06-26
+draft: false
+description: "Diese Seite enthält Informationen zu den AGBs"
+sitemap:
+  changefreq: weekly
+  disable: true
+  priority: 0.1
+noindex: true
+hidedate: true
 ---
 ℹ️ **🇩🇪 Hinweis (Demo-Seite)**
 

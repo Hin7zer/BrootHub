@@ -2,6 +2,11 @@
 title: "Blogeintrag vom 01.01.2000"
 date: 2000-01-01
 type: post
+sitemap:
+  changefreq: yearly
+  disable: true
+  priority: 0.1
+noindex: true
 ---
 
 Dies ist ein Beispiel-Blogeintrag zur Jahrtausendwende.

@@ -1,8 +1,15 @@
-+++
-date = '2025-02-08T14:49:13+01:00'
-draft = false
-title = 'Home'
-+++
+---
+date: 2026-06-26
+draft: false
+title: "Home"
+description: "Diese Seite zeigt die Funktionen des Hugo Themes BrootHub welches sich auf Funktion und Einfachheit spezialisiert. Funktionen wie Dark-Mode etc. sind dennoch enthalten."
+sitemap:
+  changefreq: weekly
+  disable: false
+  priority: 1.0
+noindex: true
+hidedate: true
+---
 
 ℹ️ **Demo Website Notice**  
 > ```This website is a non-commercial demonstration project for a Hugo theme.```  
@@ -20,6 +27,8 @@ title = 'Home'
 # 👋 Herzlich Willkommen
 
 ```Hinweis: Es wird auf die Zeichen "äöü" verzichtet. Das bedeutet nicht, dass diese Zeichen nicht abgebildet werden koennen.```
+
+Diese Seite verwendet das Hugo Theme **BrootHub** und die damit verbundenen Möglichkeiten ihre eigene Seite einfach zu gestalten. Das Theme soll einfach und transparent sein, keine Komplexen Strukturen beinhalten und wichtige standard Funktionen wie SEO, Dark-Mode Option, sowie verschiedene Menüs bieten. Es ist zwar Designtechnisch eingeschränkt, verzichtet dafür aber auf unnötige Beispielbilder und konzentriert sich auf eine einfache aber funktionierende Darstellung. Dieses Theme soll einen soliden Einstieg ermöglichen und wichtige Informationen bereitstellen und Besuchern eine klare Übersicht verschaffen.
 
 Sie befinden sich auf der **Hauptseite**. Hier koennen Sie sehen, wie die Webseite spaeter aussehen kann.
 

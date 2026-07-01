@@ -12,6 +12,9 @@
 <meta http-equiv="X-Content-Type-Options" content="nosniff">
 {{ end }}
 
+{{ if .Params.noindex }}
+<meta name="robots" content="noindex, follow">
+{{ end }}
 
 <!-- SEO -->
 {{ if site.Params.seo.enabled }}
@@ -48,6 +51,10 @@
 
 {{ end }}
 
-{{ with site.Params.favicon }}
-<link rel="icon" type="image/x-icon" href="{{ . | relURL }}">
+{{ with site.Params.favicons }}
+{{ range . }}
+<link rel="{{ default "icon" .rel }}" {{ with .type }}type="{{ . }}" {{ end }} href="{{ .path | relURL }}" {{ with .sizes }}sizes="{{ . }}" {{ end }}>
+{{ end }}
+{{ else }}
+<link rel="icon" href="{{ "/favicon.ico" | relURL }}">
 {{ end }}
